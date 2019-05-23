@@ -1,10 +1,20 @@
-num = 5
+user_input = input("Enter your value: ")
 
-if num > 1:
-    for i in range(2,num):
-        if (num % i) == 0:
-            print(num,"is not a prime number")
-            break
+try:
+    val = int(user_input)
+    if(val % 2):
+        print(user_input,"is a prime number")
     else:
-        print(num,"is a prime number")
-        print("Because ",num," is a positive integer which has no factors other than 1 and itself")
+        print(user_input,"is not a prime number")
+except ValueError:
+    print("Please enter a number!")
+
+
+#if num > 1:
+#    for i in range(2,num):
+#        if (num % i) == 0:
+#            print(num,"is not a prime number")
+#            break
+#    else:
+#        print(num,"is a prime number")
+#        print("Because ",num," is a positive integer which has no factors other than 1 and itself")
